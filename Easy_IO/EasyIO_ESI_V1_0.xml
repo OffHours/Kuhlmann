@@ -1,0 +1,422 @@
+<?xml version="1.0"?>
+<EtherCATInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="EtherCATInfo.xsd" Version="1.6">
+
+<!-- ***************** EasyIO V 1.0 ********************************************************** --> 
+
+	<Vendor>
+		<Id>#x0000079A</Id> 
+	  	<Name>AB&amp;T</Name>  
+	    <ImageData16x14>424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e000000000000000000004cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb1224cb122ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff241cedffffff241cedffffff241ced241cedffffffffffffffffff241ced241ced241cedffffff241cedffffffffffff241cedffffff241cedffffff241cedffffff241cedffffff241cedffffff241cedffffffffffff241cedffffffffffff241cedffffff241cedffffff241cedffffff241cedffffff241cedffffff241cedffffffffffff241cedffffffffffff241cedffffff241cedffffff241cedffffff241cedffffffffffff241cedffffffffffffffffff241cedffffffffffff241ced241ced241cedffffff241ced241cedffffffffffff241cedffffff241cedffffffffffff241cedffffffffffff241cedffffff241cedffffff241cedffffff241cedffffff241cedffffff241cedffffffffffff241cedffffffffffff241cedffffff241cedffffff241cedffffff241cedffffffffffff241cedffffffffffffffffff241cedffffffffffff241cedffffff241cedffffff241cedffffff241cedffffffffffffffffffffffffffffffffffff241cedffffffffffffffffff241cedffffffffffffffffff241cedffffffffffffffffffffffffffffffffffff241ced241ced241cedffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</ImageData16x14>
+	</Vendor> 
+  <Descriptions>
+    <Groups>
+      <Group SortOrder="0">
+        <Type>Mixed I/O</Type>
+        <Name LcId="1033">EasyIO</Name>
+        <ImageData16x14>424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000241ced241ced241ced241cedffffff241cedffffffffffffffffff241cedffffffffffffffffff241cedffffffffffff241cedffffffffffffffffffffffff241cedffffffffffffffffff241cedffffffffffffffffff241cedffffffffffff241cedffffffffffffffffffffffff241ced241ced241ced241ced241cedffffffffffffffffff241cedffffffffffff241cedffffffffffffffffffffffff241cedffffffffffffffffff241cedffffffffffffffffff241cedffffffffffff241cedffffffffffffffffffffffff241ced241cedffffff241ced241cedffffff241cedffffff241cedffffff241ced241ced241ced241ced241cedffffffffffff241ced241ced241cedffffffffffff241ced241ced241ced241ced241cedffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff241ced241ced241cedffffffffffff241ced241ced241cedffffff241ced241ced241cedffffff241ced241ced241ced241cedffffffffffffffffff241cedffffffffffff241cedffffffffffffffffff241cedffffffffffffffffff241ced241cedffffffffffffffffffffffff241ced241cedffffffffffff241ced241ced241cedffffff241ced241ced241ced241ced241cedffffffffffffffffffffffffffffff241cedffffff241cedffffffffffffffffff241cedffffff241ced241cedffffffffffffffffffffffff241ced241ced241cedffffff241ced241ced241cedffffff241cedffffff241ced241cedffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff241ced241ced241cedffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</ImageData16x14>
+      </Group>
+    </Groups>
+    <Devices>
+      <Device Physics="YY">
+        <Type ProductCode="#x0DEBACCA" RevisionNo="#x0000002A">EasyIO</Type>
+        <Name LcId="1033"><![CDATA[Mixed I/O]]></Name>        
+        <URL LcId="1033"><![CDATA[http://www.bausano.net/]]></URL>	
+        <GroupType>Mixed I/O</GroupType>
+        <Fmmu>Outputs</Fmmu>
+        <Fmmu>Inputs</Fmmu>
+       
+				<!-- indirizzo fisico di base per gli output -->       
+        <Sm StartAddress="#x1000" ControlByte="#x64" Enable="1">Outputs</Sm>
+ 				<!-- indirizzo fisico di base per gli input -->              
+        <Sm StartAddress="#x1200" ControlByte="#x20" Enable="1">Inputs</Sm>
+ 
+ 
+<!-- ***************** PDO di output ********************************************************** --> 
+ 
+ 				<RxPdo Fixed="1" Mandatory="1"  Sm="0">      <!-- uscite analogiche -->
+					<Index>#x1600</Index>
+					<Name>Analog outputs</Name>
+					<Entry>
+						<Index>#x7000</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>16</BitLen>
+						<Name>Output 1</Name>
+						<DataType>INT</DataType>
+					</Entry>
+ 					<Entry>
+						<Index>#x7000</Index>
+						<SubIndex>2</SubIndex>
+						<BitLen>16</BitLen>
+						<Name>Output 2</Name>
+						<DataType>INT</DataType>
+					</Entry>     
+				</RxPdo>
+  
+        <RxPdo Fixed="1" Mandatory="1" Sm="0">      <!-- uscite digitali byte 1 -->          
+          <Index>#x1601</Index>
+          <Name>Digital output byte 1</Name>
+          <Entry>
+						<Index>#x7001</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Output 1</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+          <Entry>
+						<Index>#x7001</Index>
+						<SubIndex>2</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Output 2</Name>
+						<DataType>BOOL</DataType>
+					</Entry>   
+          <Entry>
+						<Index>#x7001</Index>
+						<SubIndex>3</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Output 3</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+          <Entry>
+						<Index>#x7001</Index>
+						<SubIndex>4</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Output 4</Name>
+						<DataType>BOOL</DataType>
+					</Entry> 
+          <Entry>
+						<Index>#x7001</Index>
+						<SubIndex>5</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Output 5</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+          <Entry>
+						<Index>#x7001</Index>
+						<SubIndex>6</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Output 6</Name>
+						<DataType>BOOL</DataType>
+					</Entry>   
+          <Entry>
+						<Index>#x7001</Index>
+						<SubIndex>7</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Output 7</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+          <Entry>
+						<Index>#x7001</Index>
+						<SubIndex>8</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Output 8</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+        </RxPdo>
+ 
+        <RxPdo Fixed="1" Mandatory="1" Sm="0">      <!-- uscite digitali byte 2 -->          
+          <Index>#x1602</Index>
+          <Name>Digital output byte 2</Name>
+          <Entry>
+						<Index>#x7002</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Output 1</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+          <Entry>
+						<Index>#x7002</Index>
+						<SubIndex>2</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Output 2</Name>
+						<DataType>BOOL</DataType>
+					</Entry>   
+          <Entry>
+						<Index>#x7002</Index>
+						<SubIndex>3</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Output 3</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+          <Entry>
+						<Index>#x7002</Index>
+						<SubIndex>4</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Output 4</Name>
+						<DataType>BOOL</DataType>
+					</Entry> 
+          <Entry>
+						<Index>#x7002</Index>
+						<SubIndex>5</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Output 5</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+          <Entry>
+						<Index>#x7002</Index>
+						<SubIndex>6</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Output 6</Name>
+						<DataType>BOOL</DataType>
+					</Entry>   
+          <Entry>
+						<Index>#x7002</Index>
+						<SubIndex>7</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Output 7</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+          <Entry>
+						<Index>#x7002</Index>
+						<SubIndex>8</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Output 8</Name>
+						<DataType>BOOL</DataType>
+					</Entry>            
+        </RxPdo>
+    
+
+   
+<!-- ***************** PDO di input *********************************************************** -->  
+
+				<TxPdo Fixed="1" Mandatory="1"  Sm="1">     <!-- ingressi analogici -->				
+					<Index>#x1A00</Index>
+					<Name>Analog inputs</Name>
+					<Entry>
+						<Index>#x6000</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>16</BitLen>
+						<Name>Input 1</Name>
+						<DataType>INT</DataType>
+					</Entry>
+					<Entry>
+						<Index>#x6000</Index>
+						<SubIndex>2</SubIndex>
+						<BitLen>16</BitLen>
+						<Name>Input 2</Name>
+						<DataType>INT</DataType>
+					</Entry>
+					<Entry>
+						<Index>#x6000</Index>
+						<SubIndex>3</SubIndex>
+						<BitLen>16</BitLen>
+						<Name>Input 3</Name>
+						<DataType>INT</DataType>
+					</Entry>
+					<Entry>
+						<Index>#x6000</Index>
+						<SubIndex>4</SubIndex>
+						<BitLen>16</BitLen>
+						<Name>Input 4</Name>
+						<DataType>INT</DataType>
+					</Entry>                      
+				</TxPdo>   
+
+				<TxPdo Fixed="1" Mandatory="1"  Sm="1">     <!-- ingressi digitali byte 1 -->
+					<Index>#x1A01</Index>
+					<Name>Digital input byte 1</Name>
+					<Entry>
+						<Index>#x6001</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Input 1</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+					<Entry>
+						<Index>#x6001</Index>
+						<SubIndex>2</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Input 2</Name>
+						<DataType>BOOL</DataType>
+					</Entry> 
+					<Entry>
+						<Index>#x6001</Index>
+						<SubIndex>3</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Input 3</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+					<Entry>
+						<Index>#x6001</Index>
+						<SubIndex>4</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Input 4</Name>
+						<DataType>BOOL</DataType>
+					</Entry> 
+					<Entry>
+						<Index>#x6001</Index>
+						<SubIndex>5</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Input 5</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+					<Entry>
+						<Index>#x6001</Index>
+						<SubIndex>6</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Input 6</Name>
+						<DataType>BOOL</DataType>
+					</Entry> 
+					<Entry>
+						<Index>#x6001</Index>
+						<SubIndex>7</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Input 7</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+					<Entry>
+						<Index>#x6001</Index>
+						<SubIndex>8</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Input 8</Name>
+						<DataType>BOOL</DataType>
+					</Entry> 
+				</TxPdo>   
+        
+				<TxPdo Fixed="1" Mandatory="1"  Sm="1">     <!-- ingressi digitali byte 2 -->
+					<Index>#x1A02</Index>
+					<Name>Digital input byte 2</Name>
+					<Entry>
+						<Index>#x6002</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Input 1</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+					<Entry>
+						<Index>#x6002</Index>
+						<SubIndex>2</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Input 2</Name>
+						<DataType>BOOL</DataType>
+					</Entry> 
+					<Entry>
+						<Index>#x6002</Index>
+						<SubIndex>3</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Input 3</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+					<Entry>
+						<Index>#x6002</Index>
+						<SubIndex>4</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Input 4</Name>
+						<DataType>BOOL</DataType>
+					</Entry> 
+					<Entry>
+						<Index>#x6002</Index>
+						<SubIndex>5</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Input 5</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+					<Entry>
+						<Index>#x6002</Index>
+						<SubIndex>6</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Input 6</Name>
+						<DataType>BOOL</DataType>
+					</Entry> 
+					<Entry>
+						<Index>#x6002</Index>
+						<SubIndex>7</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Input 7</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+					<Entry>
+						<Index>#x6002</Index>
+						<SubIndex>8</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Input 8</Name>
+						<DataType>BOOL</DataType>
+					</Entry> 
+				</TxPdo>   
+
+				<TxPdo Fixed="1" Mandatory="1"  Sm="1">     <!-- faults output digitali -->
+					<Index>#x1A03</Index>
+					<Name>Digital output faults</Name>
+					<Entry>
+						<Index>#x6003</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Fault Byte 1</Name>
+						<DataType>BOOL</DataType>
+					</Entry>  
+					<Entry>
+						<Index>#x6003</Index>
+						<SubIndex>2</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Fault Byte 2</Name>
+						<DataType>BOOL</DataType>
+					</Entry> 
+					<Entry>
+						<Index>#x0000</Index>
+						<SubIndex>3</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Pad</Name>
+						<DataType>BOOL</DataType>          
+					</Entry> 
+					<Entry>
+						<Index>#x0000</Index>
+						<SubIndex>4</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Pad</Name>
+						<DataType>BOOL</DataType>          
+					</Entry> 
+					<Entry>
+						<Index>#x0000</Index>
+						<SubIndex>5</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Pad</Name>
+						<DataType>BOOL</DataType>          
+					</Entry> 
+					<Entry>
+						<Index>#x0000</Index>
+						<SubIndex>6</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Pad</Name>
+						<DataType>BOOL</DataType>          
+					</Entry> 
+					<Entry>
+						<Index>#x0000</Index>
+						<SubIndex>7</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Pad</Name>
+						<DataType>BOOL</DataType>          
+					</Entry> 
+					<Entry>
+						<Index>#x0000</Index>
+						<SubIndex>8</SubIndex>
+						<BitLen>1</BitLen>
+						<Name>Pad</Name>
+						<DataType>BOOL</DataType>          
+					</Entry> 
+				</TxPdo>  
+                 
+        <Eeprom>
+          <ByteSize>4096</ByteSize>                  
+          <ConfigData>8003006EFF00FF000000</ConfigData> 
+                                           <!-- 0x140   0x80 PDI type LAN9252 Spi      -->  
+                                           
+                                           <!-- 0x141   0x03 device emulation          -->
+                                           <!--         enhanced link detection        -->  
+                                           
+                                           <!-- 0x150   0x00 not used for LAN9252 Spi  -->
+                                           
+                                           <!-- 0x151   0x6E map Sync0 to AL event     -->
+                                           <!--         Sync0/Latch0 assigned to Sync0 -->
+                                           <!--         Sync1/Latch1 assigned to Sync1 -->
+                                           <!--         Sync0/1 push/pull active high  -->                                           
+                                                                                      
+                                           <!-- 0x982-3 0x00FF Sync0/1 lenght = 2.5uS  -->         
+                                                       
+                                           <!-- 0x152   0xFF all GPIO set to out       -->
+                                           <!-- 0x153   0x00 reserved                  -->    
+                                           
+                                           <!-- 0x12-13 0x0000 alias address           -->           
+        </Eeprom>
+      </Device>
+    </Devices>
+  </Descriptions>
+</EtherCATInfo>
